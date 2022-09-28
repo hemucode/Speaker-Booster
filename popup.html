@@ -1,0 +1,100 @@
+<!-- MIT License
+
+Copyright (c) 2022 Hemanta Gayen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
+<!doctype html>
+<html lang="en" class="mdc-typography">
+<head>
+    <meta charset="utf-8">
+    <title>Speaker Booster</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="styles/popup.css" rel="stylesheet">
+    <link href="styles/switcher.css" rel="stylesheet">
+
+</head>
+
+<body>
+<header class="header">
+
+    <div class="form-check form-check-inline" style="position: absolute; top: 12px; left: 260px;">
+        <input class="form-check-input" type="checkbox" id="insite-controller" checked>
+    </div>
+    <div class="header__main-block">
+        <img class="header__icon" src="assets/logo.svg" alt="Speaker Booster">
+        <h1 class="header__name">Speaker Booster</h1>
+    </div>
+    <div class="line"></div>
+    <span class="header__description">
+			Set a desired speaker volume level for current tab in your browser.
+		</span>
+
+</header>
+
+<section class="notification js-notification">
+    <button class="notification__close js-notification__close" tabindex="-1">×</button>
+    <div class="notification__title js-notification__title"></div>
+    <div class="notification__message js-notification__message"></div>
+</section>
+<div class="volume-container">
+<section class="volume-slider">
+    <input id="volume-slider" class="volume-slider__slider" type="range" value="100" min="0" max="600" step="10"
+           autofocus>
+</section>
+
+<section class="volume-info">
+    <span class="volume-info__volume-min">0 %</span>
+    <span class="volume-info__volume-current">
+			Volume:
+			<span id="volume-current" class="volume-info__volume-current-value"></span> %
+		</span>
+    <span class="volume-info__volume-max">600 %</span>
+</section>
+</div>
+<section class="tabs">
+    <div class="tabs__title"></div>
+    <div class="line_tabs_title"></div>
+    <div class="tabs__list"></div>
+</section>
+
+<footer class="footer">
+    <button class="link--external">
+        <a class="link" tabindex="-1" target="_blank"
+           href="https://www.downloadhub.cloud/2022/09/speaker-booster.html">
+            Please help and rate us!
+        </a>
+    </button>
+</footer>
+<script src="scripts/popup.js"></script>
+<template id="template-tab">
+    <a href="#" class="tab">
+        <div class="tab__item tab__icon">
+            <img class="tab__icon-image" src="" alt="">
+        </div>
+        <div class="tab__item tab__title"></div>
+    </a>
+</template>
+<script src="scripts/libs/jquery.3.4.1.js"></script>
+<script src="scripts/libs/jquery.switcher.js"></script>
+<script src="scripts/libs/injectSwitcher.js"></script>
+
+</body>
+
+</html>
